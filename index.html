@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 1 Ano Juntos </title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="floating-hearts" id="floatingHearts"></div>
+        
+        <div class="hero-content">
+            <div class="hero-title">
+                <h1 class="title-line-1 fade-in-up">1 Ano</h1>
+                <h1 class="title-line-2 fade-in-up delay-300">Juntos</h1>
+            </div>
+            
+            <div class="couple-names fade-in-up delay-500">
+                <span id="person1Name">Maria</span>
+                <span class="heart-icon">♥</span>
+                <span id="person2Name">Eduardo</span>
+            </div>
+
+            <div class="anniversary-card fade-in-up delay-700">
+                <div class="anniversary-date">
+                    <span class="calendar-icon">📅</span>
+                    <span>Começou em: <span id="anniversaryDateText">20/12/2024</span></span>
+                </div>
+                
+                <div class="time-counter">
+                    <div class="counter-item">
+                        <div class="counter-number" id="days">0</div>
+                        <div class="counter-label">Dias</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" id="hours">0</div>
+                        <div class="counter-label">Horas</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" id="minutes">0</div>
+                        <div class="counter-label">Minutos</div>
+                    </div>
+                    <div class="counter-item">
+                        <div class="counter-number" id="seconds">0</div>
+                        <div class="counter-label">Segundos</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator fade-in-up delay-1000">
+                <div class="scroll-text">Descubra nossa história</div>
+                <div class="scroll-line"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa <span class="text-red">Historia</span></h2>
+                <p>Por cada momento que passamos desde o rodeio que demos nosso primeiro beijo, até hoje, passamos por muitas discussões, desafios, por até mesmo inveja vindo de fora, mas o mais importante é que mesmo com TUDO isso continuamos se amando e podemos celebrar essa data incrivel que celebramos o nosso aniversário de 1 ano juntos.</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+                <div id="timelineEvents" class="timeline-events"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Messages Section -->
+    <section class="love-messages-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Saiba que eu <span class="text-red">TE VIVO</span></h2>
+                <p>Porque te amar é o que dá sentido à minha vida... e mesmo que o tempo passe, eu te VIVO em cada pensamento, em cada gesto, em cada sonho. </p>
+            </div>
+
+            <div class="love-messages-grid" id="loveMessagesGrid"></div>
+
+            <div class="special-message">
+                <div class="heart-icon-large">♥</div>
+                <h3>365 Dias, Infinitas Razões para Amar Você</h3>
+                <p>Cada amanhecer ao seu lado é uma nova página da mais bela história que já vivi. 
+                Obrigado por transformar dias comuns em momentos extraordinários e por fazer 
+                do nosso amor a coisa mais linda da minha vida.</p>
+                <div class="hearts-row">
+                    <span class="heart-pulse">♥</span>
+                    <span class="heart-pulse">♥</span>
+                    <span class="heart-pulse">♥</span>
+                    <span class="heart-pulse">♥</span>
+                    <span class="heart-pulse">♥</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photo Gallery Section -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nossa <span class="text-red">Galeria</span> de Momentos</h2>
+                <p>Cada foto conta uma história, cada sorriso guarda uma memória especial</p>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Imagens removidas conforme solicitado -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-names">
+                    <span id="footerPerson1">Maria</span> & <span id="footerPerson2">Eduardo</span>
+                </div>
+                <div class="footer-date">
+                    ♥ Desde <span id="footerDate">20/12/2024</span> ♥
+                </div>
+                <p class="footer-quote">
+                    "O amor não é sobre encontrar a pessoa perfeita, mas sobre ver uma pessoa imperfeita de forma perfeita."
+                </p>
+                <div class="footer-hearts">
+                    ♥ ♥ ♥
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Photo Modal -->
+    <div id="photoModal" class="photo-modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closePhotoModal()">&times;</button>
+            <button class="nav-btn prev-btn" onclick="prevPhoto()">&#8249;</button>
+            <button class="nav-btn next-btn" onclick="nextPhoto()">&#8250;</button>
+            
+            <img id="modalImage" src="" alt="">
+            
+            <div class="photo-info">
+                <p id="photoDescription"></p>
+                <div class="modal-heart">♥</div>
+            </div>
+            
+            <div class="photo-counter">
+                <span id="photoCounter">1 / 6</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
